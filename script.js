@@ -12,7 +12,7 @@ $(document).ready(function () {
             data: formData,
             success: function(response) {
                 // On success, display the response (customer's feedback)
-                $('body').html(response);  // Replace the current page with the response
+                $('body').html(response);  
             },
             error: function() {
                 alert("Error in form submission!");
