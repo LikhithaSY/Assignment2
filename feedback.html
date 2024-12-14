@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Feedback Form</h2>
+        <form id="feedbackForm" method="POST" action="submit_feedback.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="feedback">Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+            <!-- Rating System (Radio Buttons) -->
+            <label for="rating">Rating (1 to 5):</label><br>
+            <div class="rating">
+                <input type="radio" id="rating1" name="rating" value="1"><label for="rating1">1</label>
+                <input type="radio" id="rating2" name="rating" value="2"><label for="rating2">2</label>
+                <input type="radio" id="rating3" name="rating" value="3"><label for="rating3">3</label>
+                <input type="radio" id="rating4" name="rating" value="4"><label for="rating4">4</label>
+                <input type="radio" id="rating5" name="rating" value="5"><label for="rating5">5</label>
+            </div><br><br>
+
+            <!-- Checkbox for "What did you like about our service?" -->
+            <label>What did you like about our service?</label><br>
+            <div class="checkbox-group">
+                <input type="checkbox" id="quality" name="liked[]" value="Quality Service"><label for="quality">Quality Service</label><br>
+                <input type="checkbox" id="customer-support" name="liked[]" value="Customer Support"><label for="customer-support">Customer Support</label><br>
+                <input type="checkbox" id="timeliness" name="liked[]" value="Timeliness"><label for="timeliness">Timeliness</label><br>
+                <input type="checkbox" id="price" name="liked[]" value="Affordable Prices"><label for="price">Affordable Prices</label><br>
+                <input type="checkbox" id="ease-of-use" name="liked[]" value="Ease of Use"><label for="ease-of-use">Ease of Use</label><br>
+            </div><br><br>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
